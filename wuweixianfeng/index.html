@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="无畏先锋 - 全球顶尖的移动端战术竞技竞技场。提供最新的游戏资讯、英雄图鉴、实战攻略、版本更新公告及玩家社区交流。">
+    <meta name="keywords" content="无畏先锋,战术竞技,手游,游戏攻略,英雄图鉴,电竞赛事">
+    <title>无畏先锋-全球顶尖移动战术竞技游戏指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --accent-color: #ffa502;
+            --bg-dark: #1e272e;
+            --bg-card: #2f3640;
+            --text-light: #f1f2f6;
+            --text-gray: #a4b0be;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-unit);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: var(--text-gray);
+            font-weight: normal;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(30, 39, 46, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/seed/battle/1920/1080.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #dfe4ea;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Game Features */
+        .features {
+            padding: 4rem 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Hero Roster Section */
+        .roster {
+            padding: 4rem 0;
+            background-color: #252a34;
+        }
+
+        .hero-roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .hero-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-info {
+            padding: 1rem;
+        }
+
+        .hero-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background-color: rgba(255, 71, 87, 0.2);
+            color: var(--primary-color);
+        }
+
+        .tag.tank { background-color: rgba(46, 213, 115, 0.2); color: #2ed573; }
+        .tag.dps { background-color: rgba(255, 165, 2, 0.2); color: #ffa502; }
+        .tag.support { background-color: rgba(70, 130, 180, 0.2); color: #4682b4; }
+
+        /* Strategy Section */
+        .strategy {
+            padding: 4rem 0;
+        }
+
+        .strategy-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .strategy-article {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .strategy-article img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .article-content p {
+            color: #dfe4ea;
+            margin-bottom: 1rem;
+        }
+
+        .strategy-sidebar {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .strategy-sidebar h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 0.8rem;
+        }
+
+        .sidebar-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-gray);
+        }
+
+        .sidebar-list a:hover {
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background-color: #252a34;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1d23;
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-gray);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .nav-wrapper { padding: 0 1rem; }
+            nav ul { display: none; } /* Simplified mobile menu logic */
+            .mobile-menu-btn { display: block; }
+            .strategy-layout { grid-template-columns: 1fr; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>⚡</span> 无畏先锋
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#hero-roster">英雄图鉴</a></li>
+                    <li><a href="#strategy">实战攻略</a></li>
+                    <li><a href="#update">版本更新</a></li>
+                    <li><a href="#community">社区</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>无畏先锋</h1>
+                <p>百人同场竞技，决胜最后一人。加入全球最热血的移动端战术射击战场。</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">立即下载游戏</a>
+                    <a href="#strategy" class="btn" style="background:rgba(255,255,255,0.1); margin-left:10px;">查看新手指南</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>2亿+</h3>
+                        <p>全球注册玩家</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>张竞技地图</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>全天候排位</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features container">
+            <div class="section-title">
+                <h2>游戏特色</h2>
+                <span>Experience the Ultimate Battle</span>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>硬核射击体验</h3>
+                    <p>采用先进的物理引擎，模拟真实的弹道下坠与后坐力，还原军火库级武器手感。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>多样化职业</h3>
+                    <p>突破传统射击模式，引入坦克、突击、支援三大职业体系，团队配合是制胜关键。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>宏大战场</h3>
+                    <p>每张地图均经过精心设计，融合城市废墟、极地雪原与高科技基地等多种环境。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Hero Roster Section -->
+        <section id="hero-roster" class="roster">
+            <div class="container">
+                <div class="section-title">
+                    <h2>英雄图鉴</h2>
+                    <span>Choose Your Fighter</span>
+                </div>
+                <div class="hero-roster-grid">
+                    <!-- Hero 1 -->
+                    <div class="hero-card">
+                        <img src="https://picsum.photos/seed/hero1/300/400" alt="重装战士">
+                        <div class="hero-info">
+                            <h4>泰坦</h4>
+                            <div class="hero-tags">
+                                <span class="tag tank">坦克</span>
+                                <span class="tag">防御</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero 2 -->
+                    <div class="hero-card">
+                        <img src="https://picsum.photos/seed/hero2/300/400" alt="突击手">
+                        <div class="hero-info">
+                            <h4>幽灵</h4>
+                            <div class="hero-tags">
+                                <span class="tag dps">突击</span>
+                                <span class="tag">高机动</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero 3 -->
+                    <div class="hero-card">
+                        <img src="https://picsum.photos/seed/hero3/300/400" alt="支援单位">
+                        <div class="hero-info">
+                            <h4>医疗官</h4>
+                            <div class="hero-tags">
+                                <span class="tag support">支援</span>
+                                <span class="tag">控场</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero 4 -->
+                    <div class="hero-card">
+                        <img src="https://picsum.photos/seed/hero4/300/400" alt="狙击手">
+                        <div class="hero-info">
+                            <h4>鹰眼</h4>
+                            <div class="hero-tags">
+                                <span class="tag dps">狙击</span>
+                                <span class="tag">远程</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Section -->
+        <section id="strategy" class="strategy container">
+            <div class="section-title">
+                <h2>战术攻略</h2>
+                <span>Dominate the Arena</span>
+            </div>
+            <div class="strategy-layout">
+                <div class="strategy-main">
+                    <article class="strategy-article">
+                        <img src="https://picsum.photos/seed/map/800/400" alt="地图战术">
+                        <div class="article-content">
+                            <div class="article-meta">2023-10-24 · 攻略 · 5分钟阅读</div>
+                            <h3>荒漠绿洲：开局跳伞点位与物资分布解析</h3>
+                            <p>在荒漠绿洲这张地图中，资源分布呈现中心聚集型特征。建议新手玩家选择北部山区的空投点，虽然距离较远，但能保证落地即有三级甲与高倍镜，避免落地成盒的风险。同时要注意地图上的风沙机制，能掩盖脚步声，是伏地魔的绝佳掩护。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="strategy-article">
+                        <img src="https://picsum.photos/seed/team/800/400" alt="团队配合">
+                        <div class="article-content">
+                            <div class="article-meta">2023-10-22 · 团队 · 3分钟阅读</div>
+                            <h3>职业分工：如何组建一支不可战胜的战队</h3>
+                            <p>在无畏先锋中，单纯的技术堆叠往往无法取得胜利。一个成熟的队伍应当包含至少一名坦克负责开路和吸收伤害，一名突击手负责输出，以及一名支援负责回血和投掷物支援。沟通是胜利的基石，请务必利用语音频道实时报点。</p>
+                            <a href="#" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.9rem;">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+                <aside class="strategy-sidebar">
+                    <h3>热门推荐</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#">枪械配件选择指南</a> <span>→</span></li>
+                        <li><a href="#">M416与SCAR-L对比评测</a> <span>→</span></li>
+                        <li><a href="#">决赛圈跑位技巧</a> <span>→</span></li>
+                        <li><a href="#">常见反作弊机制说明</a> <span>→</span></li>
+                        <li><a href="#">节日限定皮肤获取途径</a> <span>→</span></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                    <span>FAQ</span>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">游戏需要什么样的设备配置？</div>
+                        <div class="faq-answer">推荐使用运行 Android 8.0 或 iOS 12.0 及以上系统的智能手机。最低配置要求为 4GB RAM，建议 8GB RAM 以获得更流畅的帧率体验。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何进行账号绑定和找回？</div>
+                        <div class="faq-answer">请前往游戏设置中的账号中心，使用手机号或第三方社交账号进行绑定。若账号丢失，请提供注册时的手机号及设备信息进行申诉。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏内是否有内购项目？</div>
+                        <div class="faq-answer">无畏先锋采用免费游玩模式。所有英雄和皮肤均可通过游戏内努力获取，同时也提供外观类道具的购买，不涉及数值影响平衡的充值。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display:inline-block;">
+                        <span>⚡</span> 无畏先锋
+                    </a>
+                    <p style="color: var(--text-gray); font-size: 0.9rem;">
+                        致力于为玩家提供最纯粹的战术竞技体验。公平、公正、热血。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏资料</h4>
+                    <ul>
+                        <li><a href="#">英雄介绍</a></li>
+                        <li><a href="#">武器图鉴</a></li>
+                        <li><a href="#">地图详解</a></li>
+                        <li><a href="#">赛季奖励</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>玩家支持</h4>
+                    <ul>
+                        <li><a href="#">官方客服</a></li>
+                        <li><a href="#">防沉迷系统</a></li>
+                        <li><a href="#">社区公约</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">官方微信公众号</a></li>
+                        <li><a href="#">官方B站</a></li>
+                        <li><a href="#">Discord社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 无畏先锋工作室. All Rights Reserved. 本页面为演示设计，非官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Mobile Menu Toggle (Simple implementation)
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navUl = document.querySelector('nav ul');
+            
+            menuBtn.addEventListener('click', () => {
+                if (navUl.style.display === 'flex') {
+                    navUl.style.display = 'none';
+                } else {
+                    navUl.style.display = 'flex';
+                    navUl.style.flexDirection = 'column';
+                    navUl.style.position = 'absolute';
+                    navUl.style.top = '70px';
+                    navUl.style.left = '0';
+                    navUl.style.width = '100%';
+                    navUl.style.backgroundColor = '#1e272e';
+                    navUl.style.padding = '1rem';
+                    navUl.style.zIndex = '999';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
