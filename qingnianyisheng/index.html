@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青年医生片花-热播医疗剧剧情介绍与角色解析</title>
+    <meta name="description" content="青年医生片花资源站提供热播医疗剧《青年医生》精彩片花、剧情预告、角色剧照及幕后花絮。深度解析剧中医患关系与职场成长故事。">
+    <meta name="keywords" content="青年医生片花, 青年医生, 医疗剧, 剧情介绍, 角色解析, 热播影视">
+    <style>
+        :root {
+            --primary-color: #00bcd4;
+            --primary-dark: #0097a7;
+            --secondary-color: #e0f7fa;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f5f7fa;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 15px;
+            color: var(--text-main);
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 5px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            background-color: rgba(0, 188, 212, 0.1);
+            color: var(--primary-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .video-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+        }
+
+        .play-icon::after {
+            content: '';
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid white;
+            margin-left: 5px;
+        }
+
+        .video-placeholder:hover .play-icon {
+            transform: scale(1.1);
+            background-color: rgba(0, 188, 212, 0.6);
+        }
+
+        .video-info {
+            padding: 20px;
+            background: var(--bg-card);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .video-meta {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .video-actions button {
+            padding: 8px 20px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-left: 10px;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Synopsis Section */
+        .synopsis {
+            background-color: var(--bg-card);
+        }
+
+        .synopsis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .synopsis-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .synopsis-highlight {
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 20px 0;
+        }
+
+        .cast-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .cast-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .cast-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .cast-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cast-info h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .cast-info span {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Episode List */
+        .episodes {
+            background-color: #fff;
+        }
+
+        .episode-tabs {
+            display: flex;
+            gap: 20px;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .episode-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .episode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .episode-thumb {
+            height: 160px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .episode-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .episode-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .episode-content {
+            padding: 15px;
+        }
+
+        .episode-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .episode-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .episode-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .episode-footer .duration {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--bg-body);
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            font-size: 20px;
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .synopsis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cast-list {
+                grid-template-columns: 1fr;
+            }
+
+            .video-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .video-actions {
+                display: flex;
+                justify-content: center;
+            }
+
+            .video-actions button {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>🎬</span> 青年医生片花
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#synopsis">剧情简介</a></li>
+                    <li><a href="#episodes">分集播放</a></li>
+                    <li><a href="#cast">主要演员</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>《青年医生》精彩片花与剧情解析</h1>
+                <div class="hero-tags">
+                    <span class="tag">#医疗剧</span>
+                    <span class="tag">#青春励志</span>
+                    <span class="tag">#急诊室故事</span>
+                </div>
+                <p>走进神秘的急诊室，见证一群年轻医生在生死时速中的成长与蜕变。这里有惊心动魄的抢救现场，也有温暖人心的医患故事。</p>
+                
+                <div class="video-wrapper">
+                    <div class="video-placeholder">
+                        <div class="play-icon"></div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-meta">
+                            <strong>第1集：初入急诊</strong><br>
+                            <span>00:00 - 04:30 片花预览</span>
+                        </div>
+                        <div class="video-actions">
+                            <button class="btn-secondary">收藏</button>
+                            <button class="btn-primary">立即播放</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Synopsis Section -->
+        <section id="synopsis" class="section synopsis">
+            <div class="container">
+                <h2 class="section-title">剧情简介</h2>
+                <div class="synopsis-grid">
+                    <div class="synopsis-text">
+                        <p>《青年医生》是一部以医疗行业为背景的电视剧，讲述了北京某三甲医院急诊科一群年轻医生在临床工作中经历的各种考验与成长。故事聚焦于急诊室这个特殊的战场，展现了医生们面对生死时的抉择、面对患者时的温情以及面对技术难题时的钻研。</p>
+                        <p>剧中人物性格鲜明，既有初出茅庐的青涩，也有在挫折中磨练出的坚韧。通过一个个真实的病例，观众可以深入了解现代医学的复杂性以及医患关系的微妙变化。</p>
+                        <div class="synopsis-highlight">
+                            "在这里，每一秒都可能决定生死；在这里，我们用青春书写医者仁心。"
+                        </div>
+                        <p>该剧不仅是一部医疗剧，更是一部关于青春、梦想与责任的作品，激励着每一位观众珍惜生命，敬畏职业。</p>
+                    </div>
+                    <div id="cast" class="cast-list">
+                        <div class="cast-item">
+                            <div class="cast-avatar">
+                                <img src="https://picsum.photos/seed/doc1/100/100" alt="演员头像">
+                            </div>
+                            <div class="cast-info">
+                                <h4>医生 A</h4>
+                                <span>急诊科主治医师</span>
+                            </div>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-avatar">
+                                <img src="https://picsum.photos/seed/doc2/100/100" alt="演员头像">
+                            </div>
+                            <div class="cast-info">
+                                <h4>医生 B</h4>
+                                <span>实习医生</span>
+                            </div>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-avatar">
+                                <img src="https://picsum.photos/seed/doc3/100/100" alt="演员头像">
+                            </div>
+                            <div class="cast-info">
+                                <h4>护士长</h4>
+                                <span>资深护理专家</span>
+                            </div>
+                        </div>
+                        <div class="cast-item">
+                            <div class="cast-avatar">
+                                <img src="https://picsum.photos/seed/doc4/100/100" alt="演员头像">
+                            </div>
+                            <div class="cast-info">
+                                <h4>患者家属</h4>
+                                <span>急诊室常客</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Episodes Section -->
+        <section id="episodes" class="section episodes">
+            <div class="container">
+                <h2 class="section-title">精彩分集与片花</h2>
+                <div class="episode-tabs">
+                    <div class="tab-btn active">最新更新</div>
+                    <div class="tab-btn">热门推荐</div>
+                    <div class="tab-btn">幕后花絮</div>
+                </div>
+                
+                <div class="episode-grid">
+                    <article class="episode-card">
+                        <div class="episode-thumb">
+                            <img src="https://picsum.photos/seed/ep1/400/250" alt="第1集海报">
+                            <span class="episode-tag">HD</span>
+                        </div>
+                        <div class="episode-content">
+                            <h3 class="episode-title">第1集：急诊室的铃声</h3>
+                            <p class="episode-desc">急诊科迎来了一批新实习生，面对繁忙的工作节奏，他们能否迅速适应？一场突如其来的车祸打破了平静。</p>
+                            <div class="episode-footer">
+                                <span class="duration">⏱ 45分钟</span>
+                                <a href="#" style="color:var(--primary-color);">播放 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="episode-card">
+                        <div class="episode-thumb">
+                            <img src="https://picsum.photos/seed/ep2/400/250" alt="第2集海报">
+                            <span class="episode-tag">HD</span>
+                        </div>
+                        <div class="episode-content">
+                            <h3 class="episode-title">第2集：生命的重量</h3>
+                            <p class="episode-desc">一名危重患者入院，医生团队在争分夺秒的同时，也面临着来自家属的巨大压力。</p>
+                            <div class="episode-footer">
+                                <span class="duration">⏱ 45分钟</span>
+                                <a href="#" style="color:var(--primary-color);">播放 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="episode-card">
+                        <div class="episode-thumb">
+                            <img src="https://picsum.photos/seed/ep3/400/250" alt="第3集海报">
+                            <span class="episode-tag">预告</span>
+                        </div>
+                        <div class="episode-content">
+                            <h3 class="episode-title">第3集：深夜的手术</h3>
+                            <p class="episode-desc">深夜突发急救，年轻医生第一次独自负责主刀，展现了惊人的潜力。</p>
+                            <div class="episode-footer">
+                                <span class="duration">⏱ 45分钟</span>
+                                <a href="#" style="color:var(--primary-color);">播放 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="episode-card">
+                        <div class="episode-thumb">
+                            <img src="https://picsum.photos/seed/ep4/400/250" alt="第4集海报">
+                            <span class="episode-tag">HD</span>
+                        </div>
+                        <div class="episode-content">
+                            <h3 class="episode-title">第4集：医患沟通的艺术</h3>
+                            <p class="episode-desc">一次复杂的诊断过程，不仅考验医术，更考验沟通技巧。实习生们学到了宝贵的一课。</p>
+                            <div class="episode-footer">
+                                <span class="duration">⏱ 45分钟</span>
+                                <a href="#" style="color:var(--primary-color);">播放 &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">《青年医生》在哪里可以观看全集？</div>
+                        <div class="faq-answer">本站提供正版《青年医生》在线观看服务，支持高清画质，请关注本站更新动态。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">片花中的医学知识是否准确？</div>
+                        <div class="faq-answer">片花内容基于电视剧剧本设计，旨在展现医疗场景，部分细节为艺术加工，请勿作为医疗参考。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">这部剧的导演和主演是谁？</div>
+                        <div class="faq-answer">《青年医生》由知名导演执导，汇集了众多实力派演员，具体演员阵容请查看“主要演员”栏目。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">更新频率是怎样的？</div>
+                        <div class="faq-answer">我们通常每周更新2集，具体更新时间请留意首页公告。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p style="color: #bdc3c7; font-size: 14px;">致力于为用户提供最优质的影视资讯和片花资源，打造专业的医疗剧爱好者社区。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">最新片花</a></li>
+                        <li><a href="#">剧集列表</a></li>
+                        <li><a href="#">观看帮助</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>法律声明</h3>
+                    <ul>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责条款</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 青年医生片花资源站. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Tab Switching Logic (Visual only)
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
