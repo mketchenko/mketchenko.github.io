@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怪物猎人2G大剑 - 终极武器攻略与实战技巧指南</title>
+    <meta name="description" content="怪物猎人2G大剑深度指南：包含大剑流派分析、配装推荐、连招技巧、怪物弱点解析及实战视频演示。提供详细的属性克制与装备选择建议，助你成为大剑专家。">
+    <meta name="keywords" content="怪物猎人2G大剑,怪物猎人2G,大剑攻略,大剑配装,怪物猎人2G视频,太刀,双刀,怪物猎人2G武器">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #2F4F4F;
+            --accent-color: #CD853F;
+            --bg-color: #f4f4f0;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgNDBMODAgMCIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: normal;
+            border-bottom: none;
+            margin-top: 8px;
+        }
+
+        /* Weapon Grid */
+        .weapon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .weapon-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+        }
+
+        .weapon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .weapon-img {
+            width: 100%;
+            height: 160px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .weapon-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .element-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .weapon-info {
+            padding: 20px;
+        }
+
+        .weapon-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .weapon-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stat-item strong {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #6d360e;
+        }
+
+        /* Guide Section */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 32px;
+        }
+
+        .guide-sidebar {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .guide-sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: var(--secondary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .guide-list a:hover {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+        }
+
+        .guide-content {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .guide-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .guide-content p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .guide-content h4 {
+            font-size: 1.1rem;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 16px;
+            border-radius: 6px;
+            font-family: "Consolas", "Monaco", monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #fcfcfc;
+        }
+
+        .element-strong { color: #d32f2f; font-weight: bold; }
+        .element-weak { color: #388e3c; font-weight: bold; }
+        .element-neutral { color: #757575; }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                MH2G <span>Guide</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">大剑攻略</a></li>
+                    <li><a href="#">怪物图鉴</a></li>
+                    <li><a href="#">配装模拟</a></li>
+                    <li><a href="#">视频教学</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>怪物猎人2G大剑</h1>
+            <p>掌握“见切斩”与“蓄力斩”的艺术，体验一击必杀的极致快感。这里是怪物猎人2G中最强武器的终极指南。</p>
+            <div class="hero-tags">
+                <span class="tag">见切斩流派</span>
+                <span class="tag">超心珠</span>
+                <span class="tag">防御珠</span>
+                <span class="tag">超力解放</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Weapon Showcase -->
+        <section>
+            <div class="section-title">
+                精选大剑推荐
+                <span>适合不同狩猎风格的武器</span>
+            </div>
+            <div class="weapon-grid">
+                <!-- Weapon 1 -->
+                <article class="weapon-card">
+                    <div class="weapon-img">
+                        <img src="https://picsum.photos/seed/monsterhunter2g1/400/300" alt="黑龙大剑预览">
+                        <div class="element-icon">🔥</div>
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">黑龙大剑 (G级)</h3>
+                        <div class="weapon-stats">
+                            <span class="stat-item">攻击力: <strong>1320</strong></span>
+                            <span class="stat-item">斩味: <strong>白斩</strong></span>
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Weapon 2 -->
+                <article class="weapon-card">
+                    <div class="weapon-img">
+                        <img src="https://picsum.photos/seed/monsterhunter2g2/400/300" alt="黑钢大剑预览">
+                        <div class="element-icon">⚪</div>
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">黑钢大剑 (G级)</h3>
+                        <div class="weapon-stats">
+                            <span class="stat-item">攻击力: <strong>1280</strong></span>
+                            <span class="stat-item">斩味: <strong>白斩</strong></span>
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Weapon 3 -->
+                <article class="weapon-card">
+                    <div class="weapon-img">
+                        <img src="https://picsum.photos/seed/monsterhunter2g3/400/300" alt="金狮子大剑预览">
+                        <div class="element-icon">⚡</div>
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">金狮子大剑 (G级)</h3>
+                        <div class="weapon-stats">
+                            <span class="stat-item">攻击力: <strong>1260</strong></span>
+                            <span class="stat-item">斩味: <strong>白斩</strong></span>
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Weapon 4 -->
+                <article class="weapon-card">
+                    <div class="weapon-img">
+                        <img src="https://picsum.photos/seed/monsterhunter2g4/400/300" alt="红莲大剑预览">
+                        <div class="element-icon">🔥</div>
+                    </div>
+                    <div class="weapon-info">
+                        <h3 class="weapon-name">红莲大剑 (G级)</h3>
+                        <div class="weapon-stats">
+                            <span class="stat-item">攻击力: <strong>1240</strong></span>
+                            <span class="stat-item">斩味: <strong>白斩</strong></span>
+                        </div>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Core Strategy Guide -->
+        <section>
+            <div class="section-title">
+                大剑核心机制解析
+                <span>见切斩与超力解放的完美配合</span>
+            </div>
+            <div class="guide-layout">
+                <aside class="guide-sidebar">
+                    <h3>快速导航</h3>
+                    <ul class="guide-list">
+                        <li><a href="#combo">连招流程</a></li>
+                        <li><a href="#skill">技能选择</a></li>
+                        <li><a href="#monster">怪物弱点</a></li>
+                        <li><a href="#defense">防御技巧</a></li>
+                    </ul>
+                </aside>
+                
+                <div class="guide-content">
+                    <h3 id="combo">见切斩连招详解</h3>
+                    <p>在怪物猎人2G中，大剑的核心节奏在于“见切斩”的防御与反击。见切斩不仅能吸收伤害，还能在成功时产生“超心珠”效果，大幅提升输出。</p>
+                    
+                    <h4>标准连招流程</h4>
+                    <div class="code-block">
+> 1. 按下【见切斩】进行防御
+> 2. 等待怪物攻击判定生效（刀身闪光）
+> 3. 在闪光瞬间按下【取消/后撤】或再次【见切斩】
+> 4. 成功后立即接【蓄力斩】（非气刃）
+                    </div>
+
+                    <h4>超力解放斩</h4>
+                    <p>在成功见切后，根据防御时间长短，会触发不同等级的超力解放斩（Lv1, Lv2, Lv3）。Lv3伤害最高，但需要精准的时机把握。建议新手优先掌握Lv1和Lv2的节奏。</p>
+
+                    <h3 id="skill">必带技能与配装</h3>
+                    <p>大剑生存能力相对较弱，因此防御和回复技能至关重要。以下是2G环境下的经典配装思路。</p>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>技能名称</th>
+                                <th>推荐等级</th>
+                                <th>作用说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>攻击力UP【大】</td>
+                                <td>3</td>
+                                <td>最直接的伤害提升，大剑必带。</td>
+                            </tr>
+                            <tr>
+                                <td>超心珠</td>
+                                <td>2-3</td>
+                                <td>见切斩反击后倍率伤害，核心输出技能。</td>
+                            </tr>
+                            <tr>
+                                <td>防御力UP【小】</td>
+                                <td>2</td>
+                                <td>减少见切斩未成功时的硬直和伤害。</td>
+                            </tr>
+                            <tr>
+                                <td>弱点特效</td>
+                                <td>1</td>
+                                <td>对头部/部位造成伤害时增加攻击力。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="monster">怪物弱点与时机</h3>
+                    <p>大剑虽然单次伤害高，但前摇时间长。面对不同怪物，需要寻找不同的输出窗口：</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>龙属性怪物：</strong> 龙车、蓄力喷火前摇较长，是完美的蓄力斩机会。</li>
+                        <li><strong>飞龙种：</strong> 休息、换区、倒地时是输出最大化时间。</li>
+                        <li><strong>小型怪物：</strong> 利用陷阱和麻痹药，在束缚状态下进行连续蓄力。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="margin-top: 40px;">
+            <div class="section-title">
+                常见问题 (FAQ)
+                <span>新手与大剑老手的疑惑解答</span>
+            </div>
+            <div class="guide-content" style="padding: 20px;">
+                <details style="margin-bottom: 16px; border-bottom: 1px solid #eee; padding-bottom: 16px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">见切斩总是失败怎么办？</summary>
+                    <p style="margin-top: 8px; color: var(--text-light);">见切斩的判定窗口非常短。建议先在练习场（如集会所的练习模式）反复练习，熟悉怪物的攻击节奏。不要贪刀，看到怪物动作明显（如张嘴、蓄力）时再按下见切。</p>
+                </details>
+                <details style="margin-bottom: 16px; border-bottom: 1px solid #eee; padding-bottom: 16px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">大剑怎么打速度快的怪物？</summary>
+                    <p style="margin-top: 8px; color: var(--text-light);">速度型怪物（如迅龙、水兽）很难命中。建议使用“真·蓄力斩”配合陷阱，或者利用大剑的“气刃斩”起手（如果有装备支持），通过气刃大回旋来牵制怪物移动。</p>
+                </details>
+                <details>
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">黑龙大剑和黑钢大剑哪个好？</summary>
+                    <p style="margin-top: 8px; color: var(--text-light);">黑龙大剑属性更高（龙属性），且自带龙属性攻击力，对龙种怪物有特效；黑钢大剑白斩长且无负面效果，适合不依赖属性的高输出环境。选择取决于你的武器强化路线和怪物类型。</p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于 MH2G</h4>
+                    <p>怪物猎人2G是任天堂DS平台上的经典动作游戏，以其硬核的战斗系统和深度的装备构建而闻名。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">怪物猎人2G Wiki</a></li>
+                        <li><a href="#">模拟器下载</a></li>
+                        <li><a href="#">道具图鉴大全</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>社区交流</h4>
+                    <ul>
+                        <li><a href="#">加入Discord群组</a></li>
+                        <li><a href="#">提交Bug反馈</a></li>
+                        <li><a href="#">合作推广</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Monster Hunter 2G Guide. 本站内容仅供学习与交流，游戏版权属于Capcom。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
